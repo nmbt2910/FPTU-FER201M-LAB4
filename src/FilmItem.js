@@ -23,7 +23,7 @@ const FilmItem = ({ film }) => {
       {showModal && (
         <div className="modal">
           <div className="modal-content">
-          <img src={film.image} alt={film.title} />
+            <img src={film.image} alt={film.title} />
             <h3>{film.title}</h3>
             <p>{film.description}</p>
             <button onClick={closeModal}>Close</button>
