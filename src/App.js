@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import Films from './Films';
 import Contact from './Contact';
+import Header from './Header';
 
 function useThemeToggle() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -33,6 +34,8 @@ const App = () => {
   return (
     <Router>
       <div className={isDarkTheme ? 'dark-theme' : 'light-theme'}>
+        <Header />
+
         <button onClick={toggleTheme}>Toggle Theme</button>
         <nav>
           <ul>
