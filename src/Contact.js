@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import './Contact.css';
 
-const Contact = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="contact-container">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -59,6 +60,17 @@ const Contact = () => {
         <button type="submit">Submit</button>
       </form>
     </div>
+  );
+};
+
+const Contact = () => {
+  return (
+    <div className='meow'>
+      
+      <ContactForm />
+
+    </div>
+    
   );
 };
 

@@ -1,0 +1,95 @@
+/* Container for the contact form */
+.contact-container {
+  width: 400px; /* Adjust the width as desired */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Heading style */
+.contact-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Form field styles */
+.contact-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Added */
+}
+
+/* Center the input field within the contact form */
+.contact-container input[type="text"],
+.contact-container textarea {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Submit button style */
+.contact-container button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.contact-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .contact-container {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+/* Light Theme */
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-theme .Contact {
+  background-color: transparent;
+}
+
+.light-theme .Contact {
+  color: #000000;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #242121;
+}
+
+.dark-theme .Contact {
+  background-color: #242121;
+  color: #000000;
+  /* Add the color property to ensure text is visible */
+}
