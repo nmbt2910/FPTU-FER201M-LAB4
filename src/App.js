@@ -34,10 +34,7 @@ const App = () => {
   return (
     <Router>
       <div className={isDarkTheme ? 'dark-theme' : 'light-theme'}>
-        <Header />
-
-        <button onClick={toggleTheme}>Toggle Theme</button>
-
+        <Header toggleTheme={toggleTheme} />
 
         <Switch>
           <Route exact path="/">

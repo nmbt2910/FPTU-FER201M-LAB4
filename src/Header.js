@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Films.css';
 
@@ -28,10 +28,10 @@ const Header = () => {
         </ul>
       </nav>
       <div className="dark-mode-switch">
-        <label htmlFor="darkModeSwitch">Dark Mode</label>
+        <label htmlFor="toggle-theme">Toggle Theme</label>
         <input
+          id="toggle-theme"
           type="checkbox"
-          id="darkModeSwitch"
           checked={isDarkTheme}
           onChange={toggleTheme}
         />
