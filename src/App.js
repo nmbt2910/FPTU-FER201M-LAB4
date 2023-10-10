@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import Films from './Films';
+import Contact from './Contact';
 
-
-// Custom hook for theme toggle
-const useThemeToggle = () => {
+function useThemeToggle() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   const toggleTheme = () => {
@@ -13,7 +13,7 @@ const useThemeToggle = () => {
   };
 
   return [isDarkTheme, toggleTheme];
-};
+}
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,32 +26,50 @@ const App = () => {
   };
 
   const closeModal = () => {
+    setSelectedFilm(null);
     setIsModalOpen(false);
   };
 
   return (
-    <div className={isDarkTheme ? 'dark-theme' : 'light-theme'}>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+    <Router>
+      <div className={isDarkTheme ? 'dark-theme' : 'light-theme'}>
+        <button onClick={toggleTheme}>Toggle Theme</button>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
 
-      <div className="films-container">
-        <Films openModal={openModal} />
+        <Switch>
+          <Route exact path="/">
+            <div className="films-container">
+              <Films openModal={openModal} />
+            </div>
+          </Route>
+          <Route path="/contact" component={Contact} />
+        </Switch>
+
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          className="modal"
+        >
+          {selectedFilm && (
+            <div>
+              <h2>{selectedFilm.title}</h2>
+              <p>{selectedFilm.description}</p>
+              <img src={selectedFilm.imageUrl} alt={selectedFilm.title} />
+              <button onClick={closeModal}>Close</button>
+            </div>
+          )}
+        </Modal>
       </div>
-
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        className="modal"
-      >
-        {selectedFilm && (
-          <div>
-            <h2>{selectedFilm.title}</h2>
-            <p>{selectedFilm.description}</p>
-            <img src={selectedFilm.imageUrl} alt={selectedFilm.title} />
-            <button onClick={closeModal}>Close</button>
-          </div>
-        )}
-      </Modal>
-    </div>
+    </Router>
   );
 };
 
