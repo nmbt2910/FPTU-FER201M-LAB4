@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Films.css';
 
-const useThemeToggle = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
-
-  return [isDarkTheme, toggleTheme];
-};
-
-const Header = () => {
-  const [isDarkTheme, toggleTheme] = useThemeToggle();
-
+const Header = ({ toggleTheme }) => {
   return (
     <header>
       <nav>
@@ -32,7 +20,6 @@ const Header = () => {
         <input
           id="toggle-theme"
           type="checkbox"
-          checked={isDarkTheme}
           onChange={toggleTheme}
         />
       </div>
