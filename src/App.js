@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Films from './Films';
 import Contact from './Contact';
 import Header from './Header';
+import About from './About';
+import News from './News';
 
 function useThemeToggle() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -43,6 +45,8 @@ const App = () => {
             </div>
           </Route>
           <Route path="/contact" component={Contact} />
+          <Route path="/about" component={About}/>
+          <Route path="/news" component={News}/>
         </Switch>
 
         <Modal
