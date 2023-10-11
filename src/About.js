@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center', // Center the text horizontally
+    justifyContent: 'center', // Center the text vertically
   },
   heading: {
     marginBottom: theme.spacing(2),
@@ -21,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     marginBottom: theme.spacing(2),
+    textAlign: 'center', // Center the long text horizontally
   },
   video: {
     position: 'fixed',
@@ -38,8 +43,8 @@ const About = () => {
 
   return (
     <div>
-        <video
-        src="/assets/videos/aboutt.mp4"
+      <video
+        src="/assets/videos/about.mp4"
         className={classes.video}
         autoPlay
         loop

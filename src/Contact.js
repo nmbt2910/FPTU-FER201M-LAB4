@@ -75,7 +75,7 @@ const Contact = () => {
   return (
     <div>
     <video
-        src="assets/videos/aboutt.mp4"
+        src="assets/videos/about.mp4"
         className={classes.video}
         autoPlay
         loop

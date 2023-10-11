@@ -44,7 +44,7 @@ const Header = ({ toggleTheme }) => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            My App
+            BTFilmLibrary
           </Typography>
           <div className={classes.linkContainer}>
             <Hidden smDown>

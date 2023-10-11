@@ -1,15 +1,15 @@
 import React from 'react';
 import filmsData from './ListOfFilms';
 import FilmItem from './FilmItem';
-import './Films.css';
+import Box from '@mui/material/Box';
 
 const Films = ({ openModal }) => {
   return (
-    <div className="films-container">
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '20px', maxWidth: '75%', margin: '0 auto' }}>
       {filmsData.map((film) => (
         <FilmItem key={film.id} film={film} openModal={openModal} />
       ))}
-    </div>
+    </Box>
   );
 };
 
