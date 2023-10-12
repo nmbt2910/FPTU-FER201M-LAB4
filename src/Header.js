@@ -52,11 +52,12 @@ const Header = ({ toggleTheme }) => {
                 <Link to="/" className={classes.navLink}>
                   Home
                 </Link>
-                <Link to="/about" className={classes.navLink}>
-                  About
-                </Link>
+                
                 <Link to="/news" className={classes.navLink}>
                   News
+                </Link>
+                <Link to="/about" className={classes.navLink}>
+                  About
                 </Link>
                 <Link to="/contact" className={classes.navLink}>
                   Contact

@@ -56,9 +56,9 @@ const App = () => {
                 <Films openModal={openModal} />
               </div>
             </Route>
-            <Route path="/contact" component={Contact} />
-            <Route path="/about" component={About} />
-            <Route path="/news" component={News} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/news" component={News} />
           </Switch>
 
           <Modal
