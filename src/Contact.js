@@ -62,9 +62,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    
     console.log(formData);
-    // Reset form fields
+    
     setFormData({
       name: '',
       email: '',

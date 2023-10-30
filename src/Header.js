@@ -52,7 +52,6 @@ const Header = ({ toggleTheme }) => {
                 <Link to="/" className={classes.navLink}>
                   Home
                 </Link>
-                
                 <Link to="/news" className={classes.navLink}>
                   News
                 </Link>

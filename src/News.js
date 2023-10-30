@@ -2,10 +2,10 @@ import React from 'react';
 import { Container, Typography, Tab, Tabs, Box } from '@material-ui/core';
 
 export default function News() {
-  // Fetch news data from an API or any other data source
-  // You can use the useEffect hook to fetch data asynchronously
+  
+  
 
-  // Replace this with your actual news data
+  
   const newsData = [
     {
       id: 1,
@@ -19,7 +19,7 @@ export default function News() {
       title: 'Star Trek Just Undid One of Deep Space Nine’s Best Characters',
       content: 'Remember when we first met the Ferengi, way back in “The Last Outpost,” episode five of Star Trek: The Next Generation‘s first season? Gene Roddenberry and co. wanted so badly to make the Ferengi menacing, with their laser whips and hunched appearance. But despite Roddenberry’s plans, the Ferengi proved to be a terrible replacement for the Klingons as the Federation’s new big bads, and quickly found themselves reduced to occasional appearances throughout the rest of the series. But instead of letting the Ferengi go to waste, Michael Piller and the producers of Deep Space Nine followed Rule of Acquisition #292: “Only a fool passes up a business opportunity.” They added Quark to the main cast, bringing back “The Last Outpost” actor Armin Shimerman to play him, and added his brother Rom (Max Grodénchik) and nephew Nog (Aron Eisenberg). Over seven seasons, Deep Space Nine transformed the Ferengi from one-note annoyances to rich and multifaceted characters, especially Rom. Initially a bumbling punching bag for his brother and an embarrassment to his son, Rom grew to be a union leader, a skilled engineer, and by the series finale, Grand Nagus of Frenginar. And then Lower Decks flushed all that down the toilet.',
     },
-    // Add more news items as needed
+    
   ];
 
   const categories = ['All', 'Horror', 'Sci-fi'];

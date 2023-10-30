@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%, -50%)',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center', // Center the text horizontally
-    justifyContent: 'center', // Center the text vertically
+    alignItems: 'center', 
+    justifyContent: 'center', 
   },
   heading: {
     marginBottom: theme.spacing(2),
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     marginBottom: theme.spacing(2),
-    textAlign: 'center', // Center the long text horizontally
+    textAlign: 'center', 
   },
   video: {
     position: 'fixed',
